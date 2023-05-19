@@ -46,7 +46,7 @@ def convert():
             messagebox.showinfo('Sensetivity Converter', f'Ваша сенса {sens2} в игре {game2}')
 
 window = Tk()
-window.title('CS:GO/VALORANT Sensitivity Converter')
+window.title('CS:GO/VALORANT/OVERWATCH Sensitivity Converter')
 window.geometry('500x350')
 frame = Frame(
     window,
