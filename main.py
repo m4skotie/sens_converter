@@ -46,42 +46,58 @@ def convert():
             messagebox.showinfo('Sensetivity Converter', f'Ваша сенса {sens2} в игре {game2}')
 
 window = Tk()
-window.title('CS:GO/VALORANT/OVERWATCH Sensitivity Converter')
-window.geometry('500x350')
+window.title('Sensitivity Converter')
+window.geometry('550x320')
+window.configure(bg='lightblue')
 frame = Frame(
     window,
     padx=10,
-    pady=10
+    pady=10,
+    bg='lightblue'
 )
 frame.pack(expand=True)
 
+title_lb = Label(
+    frame,
+    text="CS:GO/VALORANT/OVERWATCH 2 Sensitivity Converter",
+    bg='darkslategrey',
+    font=("Arial", 15),
+    fg="white"
+)
+title_lb.grid(row=1, column=1, columnspan=2, pady=(0, 5))
+
 game1_lb = Label(
     frame,
-    text="Выберите игру с которой хотите сконвертировать"
+    text="Выберите игру с которой хотите сконвертировать",
+
 )
 game1_lb.grid(row=2, column=1)
 
 game2_lb = Label(
     frame,
-    text="Выберите игру в которую хотите сконвертировать"
+    text="Выберите игру в которую хотите сконвертировать",
+
 )
 game2_lb.grid(row=6, column=1)
 
 sens1_lb = Label(
     frame,
-    text="Введите вашу старую сенсу"
+    text="Введите вашу старую сенсу",
+
 )
 sens1_lb.grid(row=3, column=1)
 
 dpi1_lb = Label(
     frame,
     text="Введите ваш старый dpi",
+
 )
 dpi1_lb.grid(row=4, column=1)
 
 dpi2_lb = Label(
     frame,
     text="Введите ваш новый dpi",
+
 )
 dpi2_lb.grid(row=5, column=1)
 
@@ -102,20 +118,24 @@ dpi2_tf.grid(row=5, column=2, pady=5)
 
 game1_cb = Combobox(
     frame,
-    values=["CS:GO", "VALORANT", "OVERWATCH 2"]
+    values=["CS:GO", "VALORANT", "OVERWATCH 2"],
+    width=17
 )
 game1_cb.grid(row=2, column=2, pady=5)
 
 game2_cb = Combobox(
     frame,
-    values=["CS:GO", "VALORANT", "OVERWATCH 2"]
+    values=["CS:GO", "VALORANT", "OVERWATCH 2"],
+    width=17
 )
 game2_cb.grid(row=6, column=2, pady=5)
 
 con_btn = Button(
     frame,
     text='Рассчитать чувствительность',
-    command=convert
+    command=convert,
+    bg='skyblue4',
+    fg="white"
 )
 con_btn.grid(row=7, column=2)
 
